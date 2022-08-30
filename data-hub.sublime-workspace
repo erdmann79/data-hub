@@ -1,0 +1,302 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Val",
+				"value"
+			],
+			[
+				"api",
+				"api_secret"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "pyproject.toml",
+			"settings":
+			{
+				"buffer_size": 262,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Deviot: ",
+				"Deviot: Open Build Folder"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"rain",
+				"RainbowBrackets: Make Rainbow"
+			],
+			[
+				"ras",
+				"RainbowBrackets: Setup Plugin"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 921.0,
+		"history":
+		[
+			"pip3",
+			"pip",
+			"quit()",
+			"pio upgrade --dev"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/home/erdmann79/projects/test/test.py",
+		"/tmp/Deviot/1660318318/src/1660318318.ino",
+		"/tmp/Deviot/1660317658/src/1660317658.ino",
+		"/home/erdmann79/projects/arduino/mega2/mega2.ino",
+		"/home/erdmann79/projects/arduino/mega/platformio.ini",
+		"/tmp/Deviot/1659193078/src/1659193078.ino",
+		"/home/erdmann79/projects/arduino/mega/src/mega.ino",
+		"/home/erdmann79/.platformio/packages/framework-arduinoespressif8266/libraries/esp8266/examples/Blink/src/Blink.ino",
+		"/home/erdmann79/projects/arduino/esp-01/uno-8266/src/firmware.ino",
+		"/tmp/Deviot/1659031318/src/1659031318.ino",
+		"/home/erdmann79/projects/roster/pyproject.toml",
+		"/home/erdmann79/projects/roster/roster.py.sample",
+		"/home/erdmann79/projects/arduino/soilsensor/platformio.ini",
+		"/tmp/Deviot/1658611516/src/1658611516.ino",
+		"/media/erdmann79/shuttle/boot/syslinux/menu.c32",
+		"/media/erdmann79/shuttle/boot/syslinux/mboot.c32",
+		"/home/erdmann79/Desktop/WRX modification list",
+		"/home/erdmann79/Desktop/wrx checkdown list",
+		"/home/erdmann79/projects/arduino/blink.py",
+		"/home/erdmann79/projects/arduino/human.cpp",
+		"/home/erdmann79/.config/sublime-text-3/Packages/User/python3.sublime-build"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "pyproject.toml",
+					"selected": true,
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								262,
+								262
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 80.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SFTP":
+	{
+		"height": 396.0
+	},
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 108.0
+	},
+	"output.deviot":
+	{
+		"height": 403.0
+	},
+	"output.exec":
+	{
+		"height": 108.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.stino_build_panel":
+	{
+		"height": 0.0
+	},
+	"output.stino_panel":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "data-hub.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 209.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
