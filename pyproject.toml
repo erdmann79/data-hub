@@ -8,6 +8,11 @@ authors = ["Eric Erdmann"]
 python = "^3.8"
 Django = "^4.1"
 python-dotenv = "^0.20.0"
+celery = "^5.2.7"
+mongoengine = "^0.24.2"
+django-viewflow = "^1.11.0"
+django-material = "^1.11.3"
+poetry-dotenv-plugin = "^0.1.0-alpha.2"
 
 [tool.poetry.dev-dependencies]
 
