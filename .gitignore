@@ -135,7 +135,7 @@ Thumbs.db
 ######################
 *.log
 *.pot
-__pycache__
+__pycache__/
 db.sqlite3
 media
 
@@ -171,5 +171,6 @@ wheels/
 ########
 ~$*.xlsx
 Jones_2019*.xlsx 
-#*.pyc
+*.pyc
+**/*.pyc
 Footer
