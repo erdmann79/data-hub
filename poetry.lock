@@ -300,14 +300,14 @@ six = "*"
 
 [[package]]
 name = "django-filter"
-version = "22.1"
+version = "21.1"
 description = "Django-filter is a reusable Django application for allowing users to filter querysets dynamically."
 category = "main"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.6"
 
 [package.dependencies]
-Django = ">=3.2"
+Django = ">=2.2"
 
 [[package]]
 name = "django-jsonstore"
@@ -331,6 +331,14 @@ python-versions = "*"
 
 [package.dependencies]
 six = "*"
+
+[[package]]
+name = "django-material-admin"
+version = "1.8.6"
+description = "Material Design For Django Administration"
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "django-viewflow"
@@ -913,7 +921,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "2a5706540852a08ee7fad5133e38c394a9c6870a0d6bcbf62d521f0dbb894264"
+content-hash = "ef4fa169de77c9a5176aa53fb1c8d4c8c1a5c3bcb13bdffed0d9c0c7260b73ae"
 
 [metadata.files]
 amqp = [
@@ -1101,8 +1109,8 @@ django-annoying = [
     {file = "django_annoying-0.10.6-py2.py3-none-any.whl", hash = "sha256:e230f28fec0559b4fdb621ff202068a78170ada2ac1ec7a73ba822cc1f737791"},
 ]
 django-filter = [
-    {file = "django-filter-22.1.tar.gz", hash = "sha256:ed473b76e84f7e83b2511bb2050c3efb36d135207d0128dfe3ae4b36e3594ba5"},
-    {file = "django_filter-22.1-py3-none-any.whl", hash = "sha256:ed429e34760127e3520a67f415bec4c905d4649fbe45d0d6da37e6ff5e0287eb"},
+    {file = "django-filter-21.1.tar.gz", hash = "sha256:632a251fa8f1aadb4b8cceff932bb52fe2f826dd7dfe7f3eac40e5c463d6836e"},
+    {file = "django_filter-21.1-py3-none-any.whl", hash = "sha256:f4a6737a30104c98d2e2a5fb93043f36dd7978e0c7ddc92f5998e85433ea5063"},
 ]
 django-jsonstore = [
     {file = "django-jsonstore-0.5.0.tar.gz", hash = "sha256:896dc10b08f59807eda1c6cebf43cd26e50d0db29d13495c027dc31e464be3c3"},
@@ -1111,6 +1119,10 @@ django-jsonstore = [
 django-material = [
     {file = "django-material-1.11.3.tar.gz", hash = "sha256:022155be14e168a67392058a7fb11382b466973e2b5942d23220d5d0886b134a"},
     {file = "django_material-1.11.3-py2.py3-none-any.whl", hash = "sha256:30a3a4fb4baaf3e6672f660197f5ac5a3c072d0bd7a8c6fa63b1cf46feb757a0"},
+]
+django-material-admin = [
+    {file = "django-material-admin-1.8.6.tar.gz", hash = "sha256:2de97e804a55d478d1776d2fe011970087c6756b5998e528b673fbb6e1f8e5c4"},
+    {file = "django_material_admin-1.8.6-py3-none-any.whl", hash = "sha256:cbd44161c6e8bed8e4fe80a68f90971d22c8a1bc7e731360bec08e6f950917f9"},
 ]
 django-viewflow = [
     {file = "django-viewflow-1.11.0.tar.gz", hash = "sha256:edb0d9bf20b406fff781eea91cd3d250cde3b3ff956ce6451ceeabab3bbc8f94"},

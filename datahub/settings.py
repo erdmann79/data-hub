@@ -15,8 +15,9 @@ from dotenv import load_dotenv
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
 
+#BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -32,21 +33,26 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+INTERNAL_IPS = [
+    '127.0.0.1'
+]
 
 # Application definition
 
 INSTALLED_APPS = [
-    "django.contrib.admin",
+    'viewflow.frontend', 
+    'viewflow',   
+    'material',
+    'material.frontend',
+    'material.admin',
+ 
+#    "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'material',
-    'material.frontend',
-    'viewflow',
-    'viewflow.frontend',
-    'pipeline',
+    'datahub.pipeline'
 ]
 
 MIDDLEWARE = [
@@ -61,18 +67,27 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "datahub.urls"
 
+LOGIN_REDIRECT_URL = '/workflow/'
+
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'datahub/templates'),
+        ],
         "APP_DIRS": True,
-        "OPTIONS": {
-            "context_processors": [
-                "django.template.context_processors.debug",
-                "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
-                "django.contrib.messages.context_processors.messages",
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
+                'datahub.website.users',
+                'material.frontend.context_processors.modules',
             ],
+            'debug': True,
         },
     },
 ]
@@ -86,9 +101,17 @@ WSGI_APPLICATION = "datahub.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": os.path.join(BASE_DIR,"db.sqlite3"),
     }
 }
+
+##DATABASES = {
+##    'default': dj_database_url.config() or {
+##        'ENGINE': 'django.db.backends.sqlite3',
+##        'NAME': os.path.join(BASE_DIR, 'db{}{}.sqlite3'.format(*django.VERSION[:2])),
+##    }
+##}
+
 
 
 # Password validation
@@ -125,9 +148,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "datahub", "static"),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+try:
+    from pipeline.local_settings import *  # NOQA
+except ImportError:
+    pass
