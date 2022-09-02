@@ -8,7 +8,6 @@ from viewflow.models import Process
 
 class Test(TestCase):
     def test_get_app_package_succeed(self):
-        self.assertEqual(compat.get_app_package('admin'), 'django.contrib.admin')
         self.assertEqual(compat.get_app_package('auth'), 'django.contrib.auth')
         self.assertEqual(compat.get_app_package('viewflow'), 'viewflow')
 
@@ -20,8 +19,6 @@ class Test(TestCase):
         self.assertRaises(Exception, compat.get_app_package, 'missing_app')
 
     def test_get_containing_app_data_succeed(self):
-        self.assertEqual(compat.get_containing_app_data('django.contrib.admin.views'),
-                         ('admin', 'django.contrib.admin'))
         self.assertEqual(compat.get_containing_app_data('django.contrib.auth.urls'),
                          ('auth', 'django.contrib.auth'))
         self.assertEqual(compat.get_containing_app_data('viewflow.flows'),
