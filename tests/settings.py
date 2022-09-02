@@ -37,8 +37,9 @@ INSTALLED_APPS = (
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'tests',
-    'datahub.pipeline'
+
+    'datahub.pipeline',
+    'tests'
 )
 
 MIDDLEWARE = [
@@ -74,9 +75,7 @@ MIGRATION_MODULES = {
     'viewflow_frontend': None,
     'viewflow': None,
     'tests': None,
-    'customnode': None,
-    'helloworld': None,
-    'shipment': None,
+    'pipeline': None
 }
 
 
