@@ -5,7 +5,7 @@ FROM python:3.9.7 as base
 # ENV PYTHONFAULTHANDLER=1 \
 #     PYTHONHASHSEED=random \
 #     PYTHONUNBUFFERED=1 \
-ENV PIP_DISABLE_PIP_VERSION_CHECK=1
+#ENV PIP_DISABLE_PIP_VERSION_CHECK=1
     #DockerHOME=/home/app/webapp  
 
 ## set work directory  
@@ -14,36 +14,48 @@ ENV PIP_DISABLE_PIP_VERSION_CHECK=1
 ## where your code lives  
 #WORKDIR $DockerHOME  
 
-WORKDIR /app
-
-FROM base as builder
 
 # set more environment variables  
 ENV PIP_DEFAULT_TIMEOUT=100 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
     PIP_NO_CACHE_DIR=1 \
-    POETRY_VERSION=1.0.5
+    POETRY_VERSION=1.1.15
 
+RUN pip install --upgrade pip
 
+RUN pip install 'poetry=='$POETRY_VERSION
 
-FROM base as poetry
-RUN pip install poetry==1.1.15
 COPY poetry.lock pyproject.toml /app/
-RUN poetry export -o requirements.txt
-RUN pip-compile --generate-hashes -o requirements.txt requirements.txt
+COPY . . /app/
+
+WORKDIR /app
+#RUN poetry config virtualenvs.create false --local
+RUN poetry config virtualenvs.in-project true --local
+
+RUN poetry install --no-interaction --no-root --no-dev
+
+RUN ls
 
 
-FROM base as build
-COPY --from=poetry /app/requirements.txt /tmp/requirements.txt
-RUN python -m venv .venv && \
-    .venv/bin/pip install 'wheel==0.36.2' && \
-    .venv/bin/pip install -r /tmp/requirements.txt
+#RUN poetry export -o requirements.txt
+#RUN pip-compile --generate-hashes -o requirements.txt requirements.txt
 
 
-
-#RUN apk add --no-cache gcc libffi-dev musl-dev postgresql-dev
-RUN pip install "poetry==$POETRY_VERSION"
-#RUN python -m venv /venv
+#FROM base as build
+#COPY --from=poetry /app/requirements.txt /tmp/requirements.txt
+#RUN python -m venv .venv && \
+#    .venv/bin/pip install 'wheel==0.36.2' && \
+#    .venv/bin/pip install -r /tmp/requirements.txt
+#
+#
+#
+##RUN apk add --no-cache gcc libffi-dev musl-dev postgresql-dev
+#RUN pip install "poetry==$POETRY_VERSION"
+##RUN python -m venv /venv
+#
+#
+#
+#
 
 
 
@@ -51,10 +63,22 @@ FROM python:3.9.7-slim as runtime
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1
 WORKDIR /app
 ENV PATH=/app/.venv/bin:$PATH
-COPY --from=build /app/.venv /app/.venv
-COPY . /app
+COPY --from=base /app/.venv /app/.venv
+COPY --from=base /app/ /app/
 
-CMD ["manage.py", "runserver"]
+#ENV LANG en_US.utf8
+EXPOSE 8000
+
+# runs the production server
+ENTRYPOINT ["python", "manage.py"]
+CMD ["runserver", "0.0.0.0:8000"]
+
+
+
+#CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"] # "--noreload"]
+
+#CMD ["./start-server.sh"]
+
 
 
 
