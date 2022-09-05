@@ -28,5 +28,5 @@ jobs:
           context: .
           push: true
           tags: ${{ github.repository }}:latest
-          docker_build_args: |
+          build-args: |
             SECRET_KEY_ARG
