@@ -60,7 +60,8 @@ RUN ls
 
 
 FROM python:3.9.7-slim as runtime
-ENV PIP_DISABLE_PIP_VERSION_CHECK=1
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    SECRET_KEY=$SECRET_KEY
 WORKDIR /app
 ENV PATH=/app/.venv/bin:$PATH
 COPY --from=base /app/.venv /app/.venv
