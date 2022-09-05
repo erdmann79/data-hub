@@ -23,8 +23,10 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         env:
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          SECRET_KEY_ARG: ${{ secrets.SECRET_KEY }}
         with:
           context: .
           push: true
           tags: ${{ github.repository }}:latest
+          docker_build_args: |
+            SECRET_KEY_ARG
