@@ -30,3 +30,4 @@ jobs:
           tags: ${{ github.repository }}:latest
           build-args: |
             SECRET_KEY_ARG
+            
