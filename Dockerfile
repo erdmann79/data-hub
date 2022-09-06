@@ -13,7 +13,7 @@ ENV PIP_DEFAULT_TIMEOUT=100 \
 #    rustc \
 #&& rm -rf /var/lib/apt/lists/*
 
-
+ENV CRYPTOGRAPHY_DONT_BUILD_RUST=true
 
 RUN pip install --upgrade pip
 
