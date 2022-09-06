@@ -4,6 +4,14 @@ version = "0.1.0"
 description = ""
 authors = ["Eric Erdmann"]
 
+[[tool.poetry.source]]
+name = "pypi_"
+url = "https://pypi.org/simple/"
+
+[[tool.poetry.source]]
+name = "piwheels_"
+url = "https://www.piwheels.org/simple/"
+
 [tool.poetry.dependencies]
 python = "^3.8"
 python-dotenv = "^0.20.0"
