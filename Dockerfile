@@ -14,7 +14,8 @@ RUN apt-get update && apt-get install -y \
     musl-dev \
     python3-dev \
     libffi-dev \
-    openssl-dev \
+    openssl \
+    libssl-dev \
 && rm -rf /var/lib/apt/lists/*
 
 RUN dpkg --print-architecture
