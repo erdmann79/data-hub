@@ -13,11 +13,18 @@ ENV PIP_DEFAULT_TIMEOUT=100 \
 #    rustc \
 #&& rm -rf /var/lib/apt/lists/*
 
-ENV CRYPTOGRAPHY_DONT_BUILD_RUST=true
+RUN dpkg --print-architecture
+
+RUN \
+    if [ `dpkg --print-architecture` = "armhf" ]; then \
+    printf "[global]\nextra-index-url=https://www.piwheels.org/simple\n" > /etc/pip.conf ; \
+    fi
+
+#ENV CRYPTOGRAPHY_DONT_BUILD_RUST=true
 
 RUN pip install --upgrade pip
 
-RUN --security=insecure mkdir -p /root/.cargo && chmod 777 /root/.cargo && mount -t tmpfs none /root/.cargo && pip3 install --no-cache-dir cryptography
+# RUN --security=insecure mkdir -p /root/.cargo && chmod 777 /root/.cargo && mount -t tmpfs none /root/.cargo && pip3 install --no-cache-dir cryptography
 
 RUN pip install 'poetry=='$POETRY_VERSION
 
