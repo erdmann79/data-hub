@@ -9,12 +9,15 @@ ENV PIP_DEFAULT_TIMEOUT=100 \
     PIP_NO_CACHE_DIR=1 \
     POETRY_VERSION=1.1.15
 
-RUN apt-get update && apt-get install -y \
-    rustc \
-&& rm -rf /var/lib/apt/lists/*
+#RUN apt-get update && apt-get install -y \
+#    rustc \
+#&& rm -rf /var/lib/apt/lists/*
+
 
 
 RUN pip install --upgrade pip
+
+RUN --security=insecure mkdir -p /root/.cargo && chmod 777 /root/.cargo && mount -t tmpfs none /root/.cargo && pip3 install --no-cache-dir cryptography
 
 RUN pip install 'poetry=='$POETRY_VERSION
 
