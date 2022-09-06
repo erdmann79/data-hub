@@ -1405,7 +1405,7 @@ reference = "pypi_"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "b6a68a816067d1380885c770cd46107212d666f0d7c4cf53935b80e179decad9"
+content-hash = "a287614e314e5bd512af8a10d4f9e60e821e5ba3773795dba6d6ee6d2fc41648"
 
 [metadata.files]
 amqp = [

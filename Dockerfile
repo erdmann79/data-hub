@@ -9,9 +9,13 @@ ENV PIP_DEFAULT_TIMEOUT=100 \
     PIP_NO_CACHE_DIR=1 \
     POETRY_VERSION=1.1.15
 
-#RUN apt-get update && apt-get install -y \
-#    rustc \
-#&& rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y \
+    gcc \
+    musl-dev \
+    python3-dev \
+    libffi-dev \
+    openssl-dev \
+&& rm -rf /var/lib/apt/lists/*
 
 RUN dpkg --print-architecture
 
