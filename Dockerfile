@@ -1,7 +1,7 @@
 # base image  
 FROM python:3.9.7 as base
 
-ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
+# ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 
 # set environment variables  
 ENV PIP_DEFAULT_TIMEOUT=100 \
