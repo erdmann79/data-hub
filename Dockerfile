@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
     libffi-dev \
     openssl \
     libssl-dev \
+    rust-all \
 && rm -rf /var/lib/apt/lists/*
 
 RUN dpkg --print-architecture
