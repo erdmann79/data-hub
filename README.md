@@ -43,11 +43,7 @@ $ poetry shell
 
 ## Pictures
 <p float="left">
-  <img src="./images/IMG_20220812_221020_01.jpg" align="top" alt="Breadboard1" width="350">
-  <img src="./images/IMG_20220815_171640_01.jpg" align="top" alt="Breadboard2" width="350">
+  <img src="./images/b86bd0a4-2c55-4935-b3a4-f865384e7800.png" align="top" alt="Breadboard1" width="350">
 </p>
-<p float="left">
-  <img src="./images/Screenshot_20220816-222419.png" align="top" alt="HASS phone app" width="350">
-  <img src="/images/Screenshot from 2022-08-29 18-51-03.png" align="top" alt="HASS Web Panel" width="350">
-</p>
+
 
