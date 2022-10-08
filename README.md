@@ -45,7 +45,8 @@ $ poetry shell
 <p float="left">
   <img src="./images/b86bd0a4-2c55-4935-b3a4-f865384e7800.png" align="top" alt="Breadboard1" width="350">
 </p>
-```yaml
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -66,4 +67,4 @@ spec:
         image: erdmann79/data-hub
         ports:
         - containerPort: 8000
-````
+---
