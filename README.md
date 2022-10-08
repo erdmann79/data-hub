@@ -5,9 +5,9 @@ Django/Mongodb
 ## The problem
 the problem
 
-## Repository setup
+## Repository Build
 
-## Python setup
+### Python setup
 
 For your convenience, setting up the virtual environment has been automated using poetry. https://python-poetry.org/ You must have python with poetry installed.
 
@@ -34,6 +34,19 @@ Switch to the interactive enviroment (PYTHON) by typing "poetry shell". Note the
 $ poetry shell
 ~/projects/roster$ . /home/<username>/.cache/pypoetry/virtualenvs/data-hub-JxgitZP8-py3.10/bin/activate
 (data-hub-JxgitZP8-py3.10) $~/projects/data-hub$
+````
+
+## Docker Deploy from dockerhub
+
+Install Docker
+
+### Install Docker
+
+### Docker-hub
+
+```bash
+$ poetry shell
+~/projects/roster$ docker pull erdmann79/data-hub
 ````
 
 
